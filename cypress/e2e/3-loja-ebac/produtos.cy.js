@@ -1,21 +1,30 @@
 /// <reference types="cypress"/>
+import produtosPage from "../../support/Page-objects/produtos.page";
 
 
 describe('Funcionalidade: produtos', () => {
 
     beforeEach(() => {
-        cy.visit('produtos')
+        produtosPage.vistarUrl()
         
     });
     
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.products >.row')
-            //.first()
-            //.last()
-            //.eq(2)
-            .contains('Ariel Roll Sleeve Sweatshirt')
-            .click()
+       produtosPage.buscarProdutoLista('Arcadio Gym Short')
+       cy.get('.woocommerce-product-details__short-description > p').should('exist')
+    });
 
-           cy.get('#tab-title-description > a').should('contain', 'Descrição')
+    it.only('Deve buscar um produto com sucesso', () => {
+        let pruduto = "Vulcan Weightlifting Tank"
+        produtosPage.buscarProduto(pruduto)
+        cy.get('.product_title').should('contain', 'Vulcan Weightlifting Tank')
+    });
+
+    it('Deve visitar a página do prudoto', () => {
+        
+    });
+
+    it('Deve adicionar produto ao carrinho ', () => {
+        
     });
 });
