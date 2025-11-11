@@ -33,7 +33,7 @@ describe('Funcionalidade: produtos', () => {
         
     });
 
-    it.only('Buscando da massa de dados ', () => {
+    it('Buscando da massa de dados ', () => {
 
         cy.fixture('produtos').then(dados => {
             
@@ -43,7 +43,7 @@ describe('Funcionalidade: produtos', () => {
              dados[0].cor, 
              dados[0].quantidade);
         cy.get('.woocommerce-message').should('contain', dados[0].nomeProduto)
-        
+
         })
 
         
