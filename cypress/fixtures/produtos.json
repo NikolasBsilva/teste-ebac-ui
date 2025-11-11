@@ -1,0 +1,23 @@
+[
+    {
+        "nomeProduto": "Zoltan Gym Tee",
+        "tamanho": "XL",
+        "cor": "Green",
+        "quantidade": 5 
+    },
+
+     {
+        "nomeProduto": "Aero Daily Fitness Tee",
+        "tamanho": "XL",
+        "cor": "Black ",
+        "quantidade": 5 
+    },
+
+     {
+        "nomeProduto": "Sol Active Short",
+        "tamanho": "36",
+        "cor": "Purple",
+        "quantidade": 3 
+    }
+    
+]
